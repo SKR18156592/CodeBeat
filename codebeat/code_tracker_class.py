@@ -118,8 +118,8 @@ class code_tracker:
                 d+=','
         d+=']'
         time_addedlist[-1]+=d   
-        l="\n".join(time_addedlist)
-        return l  
+    
+        return "\n".join(time_addedlist) 
     
 
 
