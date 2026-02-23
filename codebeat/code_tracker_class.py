@@ -15,7 +15,7 @@ class code_tracker:
         return self.namespace[self.func_name]
 
     def __call__(self,x,y):
-        self.display(self.get_exceutable(),x,y)
+        self.display(self.get_excecutable(),x,y)
 
 
     def display(self,k,x,y):
