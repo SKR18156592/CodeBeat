@@ -15,13 +15,12 @@ class code_tracker:
         return self.namespace[self.func_name]
 
     def __call__(self,x,y):
-        # print(hi)
         self.display(self.get_exceutable(),x,y)
 
 
     def display(self,k,x,y):
         dt1={}
-        for _ in range(10):
+        for _ in range(self.no_of_iterations):
             nf=k(x,y)
             f1 = nf[1]
             for i,line in enumerate(f1):
