@@ -9,13 +9,14 @@ class code_tracker:
         self.no_of_iterations=no_of_iterations
         self.outputstring=self.modify_function()
         self.func_name=function_object.__name__
+        self.exec_func=self.get_executable()
     
-    def get_excecutable(self):
+    def get_executable(self):
         exec(self.outputstring,self.namespace)
         return self.namespace[self.func_name]
 
     def __call__(self,x,y):
-        self.display(self.get_excecutable(),x,y)
+        self.display(self.exec_func,x,y)
 
 
     def display(self,k,x,y):
