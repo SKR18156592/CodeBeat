@@ -52,12 +52,7 @@ class code_tracker:
             lst.append(value)
         mean_time=statistics.mean(lst)
         std_time=statistics.stdev(lst)
-        # max_len=0   
-        # for value in dtmean.values():  
-        #     cur_len=len(str(value*1000))
-        #     print(cur_len)
-        #     if cur_len>max_len:
-        #         max_len=cur_len
+    
         max_len=len("mean_time(in ms)      ")
         max_word_count=0
         for line in f1:
