@@ -7,10 +7,17 @@ class code_tracker:
         self.namespace={'time':time}
         self.function_object=function_object
         self.no_of_iterations=no_of_iterations
-        self.modify_function()
+        self.outputstring=self.modify_function()
+        self.func_name=function_object.__name__
+    
+    def get_excecutable(self):
+        exec(self.outputstring,self.namespace)
+        return self.namespace[self.func_name]
+
     def __call__(self,x,y):
         # print(hi)
         self.display(self.get_exceutable(),x,y)
+
 
     def display(self,k,x,y):
         dt1={}
@@ -78,11 +85,8 @@ class code_tracker:
             print(f"| {i} {' '*(len('line No')-1)}|{line[1]}{indent} | {f'{t:.3f}'}{' '*(max_len-len(f'{t:.3f}'))} | {dtsd[line[1]]*1000:.3f}")    
         print(f"{'-'*len('line No')*(max_word_count)}")
 
-    
-    def get_exceutable(self):
-        exec(self.modify_function(),self.namespace)
-        return self.namespace['self.function_object']
-    
+
+        
     def modify_function(self):
         s=inspect.getsource(self.function_object)
         x = s.split('\n')
@@ -122,6 +126,10 @@ class code_tracker:
         time_addedlist[-1]+=d   
         l="\n".join(time_addedlist)
         return l  
+    
+
+
+    
 
 
 
