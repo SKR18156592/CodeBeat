@@ -15,14 +15,14 @@ class code_tracker:
         exec(self.outputstring,self.namespace)
         return self.namespace[self.func_name]
 
-    def __call__(self,x,y):
-        self.display(self.exec_func,x,y)
+    def __call__(self,*args,**kwargs):
+        self.display(self.exec_func,*args,**kwargs)
 
 
-    def display(self,k,x,y):
+    def display(self,k,*args,**kwargs):
         dt1={}
         for _ in range(self.no_of_iterations):
-            nf=k(x,y)
+            nf=k(*args,**kwargs)
             f1 = nf[1]
             for i,line in enumerate(f1):
                 lst1=[]
@@ -97,7 +97,7 @@ class code_tracker:
                 if indent_lst[i]<indent_lst[i-1]:
                     time_addedlist.append(f"{indent_lst[i-1]}time_watcher_{i}=time.time()")
                     time_addedlist.append(f"{indent_lst[i-1]}max_watcher_{i}=max(max_watcher_{i},time_watcher_{i} - time_watcher_{i-1})")
-                    i+=1   
+                
             time_addedlist.append(f"{indent}time_watcher_{i}=time.time()")
             if i==0:
                 time_addedlist.append(f"{indent}max_watcher_{i}=time.time()")
