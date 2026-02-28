@@ -102,7 +102,7 @@ class code_tracker:
             word_count=len(line[1])
             indent=" "*(max_word_count-word_count) 
             if i==0:
-                print(f"|> Function Name: fun, #iter:10, mean_time(in ms):{mean_time*1000:.3f}, std_time(in ms):{std_time*1000:.3f}")
+                print(f"|> Function Name: fun, #iter:{self.no_of_iterations}, mean_time(in ms):{mean_time*1000:.3f}, std_time(in ms):{std_time*1000:.3f}")
                 print(f"{'='*len('line No')*(max_word_count)} ")
                 print(f"| line No | Line{' '*(word_count-len('Line'))}{indent}| mean_time(in ms){' '*(max_len-len('mean_time(in ms)'))} | std_time(in ms)")
                 print(f"{'='*len('line No')*(max_word_count)} ")    
