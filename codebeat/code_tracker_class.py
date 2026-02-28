@@ -3,6 +3,40 @@ import inspect
 from math import *
 import statistics
 class code_tracker:
+    """
+    Main Module class that tracks the execution time and results of a given function over multiple iterations.
+
+    Parameters
+    ----------
+    function_object : callable
+        The function to be tracked.
+    namespace : dict, optional
+        Additional namespace to provide to the function during execution, by default an empty dictionary.
+    no_of_iterations : int, optional
+        Number of iterations to run the tracked function, by default 10.
+
+    Attributes
+    ----------
+    function_object : callable
+        The tracked function.
+    no_of_iterations : int
+        Number of iterations to run the function.
+    namespace : dict
+        Namespace for the function's execution environment.
+
+    Methods
+    ----------
+
+    __call__():
+        Calls the tracked function with specified parameters and analyzes the results.
+    get_executable():
+        Generates an executable version of the tracked function.
+    display():
+       displays the result
+    modify_function():
+        modify function by inteserting time.time bt each line
+    """
+        
     def __init__(self,function_object,no_of_iterations=10,namespace={}):
         self.namespace={'time':time}
         self.function_object=function_object
