@@ -1,6 +1,8 @@
+
 import time
 import inspect
 from math import *
+from math import sin,cos,exp
 import statistics
 class code_tracker:
     """
@@ -38,7 +40,7 @@ class code_tracker:
     """
         
     def __init__(self,function_object,no_of_iterations=10,namespace={}):
-        self.namespace={'time':time}
+        self.namespace={'time':time,'sin':sin,'cos':cos,'exp':exp}
         self.function_object=function_object
         self.no_of_iterations=no_of_iterations
         self.outputstring=self.modify_function()
@@ -128,16 +130,25 @@ class code_tracker:
             indent=" " *(len(line)-len(line.lstrip()))
             indent_lst.append(indent)
             if i>1:
-                if indent_lst[i]<indent_lst[i-1]:
+                if indent_lst[i]<indent_lst[i-1] and "else" not in line:
                     time_addedlist.append(f"{indent_lst[i-1]}time_watcher_{i}=time.time()")
                     time_addedlist.append(f"{indent_lst[i-1]}max_watcher_{i}=max(max_watcher_{i},time_watcher_{i} - time_watcher_{i-1})")
-                
-            time_addedlist.append(f"{indent}time_watcher_{i}=time.time()")
+             
+            if "else" in line:
+                time_addedlist.append(f"{indent_lst[i-1]}time_watcher_{i}=time.time()")
+            else:
+                time_addedlist.append(f"{indent}time_watcher_{i}=time.time()")
             if i==0:
-                time_addedlist.append(f"{indent}max_watcher_{i}=time.time()")
+                 time_addedlist.append(f"{indent}max_watcher_{i}=time.time()")
+    
+    
+    
             if i>0:
-                time_addedlist.append(f"{indent}max_watcher_{i}=max(max_watcher_{i},time_watcher_{i} - time_watcher_{i-1})")    
-            time_addedlist.append(line)  
+                if "else" in line:
+                    time_addedlist.append(f"{indent_lst[i-1]}max_watcher_{i}=max(max_watcher_{i},time_watcher_{i} - time_watcher_{i-1})")
+                else:  
+                    time_addedlist.append(f"{indent}max_watcher_{i}=max(max_watcher_{i},time_watcher_{i} - time_watcher_{i-1})")  
+            time_addedlist.append(line)
             i+=1 
         for j in range(len(y)+1):
             indent=" " *(len(y[0])-len(y[0].lstrip()))
