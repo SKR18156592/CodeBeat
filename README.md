@@ -14,7 +14,7 @@
 
 
 ## Installation
-You can install codepulse using pip:
+You can install codebeat using pip:
 ```bash
 pip install codebeat
 ```
