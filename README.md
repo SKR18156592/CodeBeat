@@ -16,7 +16,7 @@ The source code is currently hosted on GitHub at:https://github.com/SKR18156592/
 
 ```bash
 pip install codebeat
-
+```
 
 ## Quick Start
 
