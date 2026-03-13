@@ -8,6 +8,10 @@
 - Runs functions multiple times (e.g., 10-12 iterations) for reliable profiling.
 - Displays formatted tables with line numbers, code, and timing metrics.
 
+## Where to get it
+The source code is currently hosted on GitHub at:https://github.com/SKR18156592/CodeBeat
+
+
 ## Installation
 1. Clone the repo: `git clone https://github.com/SKR18156592/CodeBeat.git`
 2. Install: `pip install -r requirements.txt` (assumes `codebeat` as package).
