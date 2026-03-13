@@ -10,10 +10,11 @@
 
 ## Where to get it
 The source code is currently hosted on GitHub at:https://github.com/SKR18156592/CodeBeat
+Binary installers for the latest released version are available at the Python Package Index (PyPI).
 
 
 ## Installation
-
+You can install codepulse using pip:
 ```bash
 pip install codebeat
 ```
