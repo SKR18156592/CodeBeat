@@ -9,8 +9,8 @@
 - Displays formatted tables with line numbers, code, and timing metrics.
 
 ## Where to get it
-The source code is currently hosted on GitHub at:https://github.com/SKR18156592/CodeBeat.
-Binary installers for the latest released version are available at the Python Package Index (PyPI).
+- The source code is currently hosted on GitHub at:https://github.com/SKR18156592/CodeBeat.
+- Binary installers for the latest released version are available at the Python Package Index (PyPI).
 
 
 ## Installation
