@@ -19,7 +19,7 @@ The source code is currently hosted on GitHub at:https://github.com/SKR18156592/
 
 ## Quick Start
 
-Import the Tracker module from the `codebeat` package, create an instance of it by passing the function you want to track as a parameter, and then utilize this instance to invoke the tracked function. When you create an instance using `code_tracker(fun1)`, it generates a wrapper around fun1 that effectively measures and records the execution time line by line.
+Import the code_tracker module from the `codebeat` package, create an instance of it by passing the function you want to track as a parameter, and then utilize this instance to invoke the tracked function. When you create an instance using `code_tracker(fun1)`, it generates a wrapper around fun1 that effectively measures and records the execution time line by line.
 
 ```python
 from codebeat import code_tracker
