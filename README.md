@@ -62,9 +62,12 @@ Reveals nested loop overhead—outer loop takes ~50% more time than inner.
 ```
 CodeBeat/
 ├── codebeat/
-│   └── __init__.py     # code_tracker class
-├── example.ipynb       # Demos above
+│   ├── __init__.py      # Exports code_tracker
+│   └── code_tracker.py  # Main timing logic
+├── example.ipynb        # Usage demos
+├── LICENSE
 ├── README.md
+├── setup.py
 └── requirements.txt
 ``` 
 
