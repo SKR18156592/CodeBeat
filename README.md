@@ -32,13 +32,13 @@ result = obj(3, 4)  # Executes 12x, prints timing table
 ===========================================================================================================================
 |> Function Name: fun1, #iter:12, mean_time(in ms):0.031, std_time(in ms):0.066
 ===========================================================================================================================
-| line No | Line             | mean_time(in ms) | std_time(in ms)
+| line No | Line               | mean_time(in ms) | std_time(in ms)
 ===========================================================================================================================
-| 0       | m = 0           | 0.000           | 0.000
-| 1       | for i in range(x): | 0.012         | 0.021
-| 2       | for j in range(y): | 0.008         | 0.021
-| 3       | m += i*j         | 0.007           | 0.020
-| 4       | return m         | nan             | nan
+| 0       | m = 0              | 0.000            | 0.000
+| 1       | for i in range(x): | 0.012            | 0.021
+| 2       | for j in range(y): | 0.008            | 0.021
+| 3       | m += i*j           | 0.007            | 0.020
+| 4       | return m           | nan              | nan
 ```
 Reveals nested loop overhead—outer loop takes ~50% more time than inner.
 
