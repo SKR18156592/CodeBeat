@@ -13,9 +13,10 @@ The source code is currently hosted on GitHub at:https://github.com/SKR18156592/
 
 
 ## Installation
-1. Clone the repo: `git clone https://github.com/SKR18156592/CodeBeat.git`
-2. Install: `pip install -r requirements.txt` (assumes `codebeat` as package).
-3. Import: `from codebeat import code_tracker`
+
+```bash
+pip install codebeat
+
 
 ## Quick Start
 
