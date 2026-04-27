@@ -1,5 +1,11 @@
 # CodeBeat
+| | |
+| --- | --- |
+| Package | [![PyPI Latest Release](https://img.shields.io/pypi/v/codebeat.svg)](https://pypi.org/project/codebeat/) [![PyPI Downloads](https://img.shields.io/pypi/dm/codebeat.svg?label=PyPI%20downloads)](https://pypi.org/project/codebeat/) |
 
+
+
+# What is CodeBeat?
 **CodeBeat** is a line-by-line Python function tracer for debugging and performance analysis. It measures execution time per line across multiple runs, showing mean and standard deviation to identify bottlenecks in loops, branches, math operations, and list comprehensions.
 
 ## Features
